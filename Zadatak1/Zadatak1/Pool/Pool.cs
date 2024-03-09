@@ -57,6 +57,7 @@ namespace Zadatak1.Pool
             if (poolStatus != newStatus)
             {
                 poolStatus = newStatus;
+                if(poolStatus != Status.Half)
                 OnStatusChange?.Invoke(poolStatus);
             }
         }

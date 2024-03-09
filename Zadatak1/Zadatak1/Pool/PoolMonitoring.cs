@@ -11,7 +11,7 @@ namespace Zadatak1.Pool
 {
     public class PoolMonitoring
     {
-        private Pool pool;
+        private readonly Pool pool;
 
         public PoolMonitoring(Pool pool)
         {
