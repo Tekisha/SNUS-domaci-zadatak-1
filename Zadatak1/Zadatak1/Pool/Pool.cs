@@ -51,6 +51,19 @@ namespace Zadatak1.Pool
             poolStatus = Status.Half;
         }
 
+        public Pool(double level, double minLevel, double maxLevel)
+        {
+            if (minLevel >= maxLevel)
+            {
+                throw new ArgumentException("Minimamaln nivo mora biti manji od maksimalnog nivoa.");
+            }
+
+            this.minLevel = minLevel;
+            this.maxLevel = maxLevel;
+            this.level = Math.Max(minLevel, Math.Min(level, maxLevel));
+            UpdatePoolStatus();
+        }
+
         private void UpdatePoolStatus()
         {
             var newStatus = level <= minLevel ? Status.Empty : level >= maxLevel ? Status.Full : Status.Half;
