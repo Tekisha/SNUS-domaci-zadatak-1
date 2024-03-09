@@ -1,1 +1,1 @@
-# SNUS-domaci-zadatak-1
+# SNUS Domaci zadatak 1
